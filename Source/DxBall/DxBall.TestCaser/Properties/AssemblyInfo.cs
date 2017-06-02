@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DxBall.Startup")]
+[assembly: AssemblyTitle("DxBall.TestCaser")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DxBall.Startup")]
+[assembly: AssemblyProduct("DxBall.TestCaser")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f4efe7a0-1428-446b-a3bd-66eba1612730")]
+[assembly: Guid("db7e6b2f-4d7d-448d-869d-51fa5d118f50")]
 
 // Version information for an assembly consists of the following four values:
 //

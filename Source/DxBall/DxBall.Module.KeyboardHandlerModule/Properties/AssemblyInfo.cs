@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DxBall.Startup")]
+[assembly: AssemblyTitle("DxBall.Module.KeyboardHandlerModule")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DxBall.Startup")]
+[assembly: AssemblyProduct("DxBall.Module.KeyboardHandlerModule")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f4efe7a0-1428-446b-a3bd-66eba1612730")]
+[assembly: Guid("59bb7ff2-577f-4717-b847-202e36e21943")]
 
 // Version information for an assembly consists of the following four values:
 //

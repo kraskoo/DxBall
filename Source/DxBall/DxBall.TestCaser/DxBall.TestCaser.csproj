@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4EFE7A0-1428-446B-A3BD-66EBA1612730}</ProjectGuid>
+    <ProjectGuid>{DB7E6B2F-4D7D-448D-869D-51FA5D118F50}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DxBall.Startup</RootNamespace>
-    <AssemblyName>DxBall.Startup</AssemblyName>
+    <RootNamespace>DxBall.TestCaser</RootNamespace>
+    <AssemblyName>DxBall.TestCaser</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DxBall.Module.KeyboardHandlerModule\DxBall.Module.KeyboardHandlerModule.csproj">
+      <Project>{59BB7FF2-577F-4717-B847-202E36E21943}</Project>
+      <Name>DxBall.Module.KeyboardHandlerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DxBall.Modules.DrawModule\DxBall.Modules.DrawModule.csproj">
+      <Project>{3D309793-0448-44AE-AB67-B71E79992EC1}</Project>
+      <Name>DxBall.Modules.DrawModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DxBall.Modules.TimeModule\DxBall.Modules.TimeModule.csproj">
+      <Project>{3C9B21F7-3808-4CF3-A6A4-B71290457877}</Project>
+      <Name>DxBall.Modules.TimeModule</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

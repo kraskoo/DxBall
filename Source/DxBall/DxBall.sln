@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.Startup", "DxBall.Startup\DxBall.Startup.csproj", "{08EEAF71-E94B-4A5F-860E-CB60C37A7C95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.TestCaser", "DxBall.TestCaser\DxBall.TestCaser.csproj", "{DB7E6B2F-4D7D-448D-869D-51FA5D118F50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DxBall.Modules", "DxBall.Modules", "{D07E21C8-10D5-4455-8385-5E2DBB0AD592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.Modules.TimeModule", "DxBall.Modules.TimeModule\DxBall.Modules.TimeModule.csproj", "{3C9B21F7-3808-4CF3-A6A4-B71290457877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.Module.KeyboardHandlerModule", "DxBall.Module.KeyboardHandlerModule\DxBall.Module.KeyboardHandlerModule.csproj", "{59BB7FF2-577F-4717-B847-202E36E21943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.Modules.DrawModule", "DxBall.Modules.DrawModule\DxBall.Modules.DrawModule.csproj", "{3D309793-0448-44AE-AB67-B71E79992EC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +19,29 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08EEAF71-E94B-4A5F-860E-CB60C37A7C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08EEAF71-E94B-4A5F-860E-CB60C37A7C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08EEAF71-E94B-4A5F-860E-CB60C37A7C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08EEAF71-E94B-4A5F-860E-CB60C37A7C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7E6B2F-4D7D-448D-869D-51FA5D118F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7E6B2F-4D7D-448D-869D-51FA5D118F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7E6B2F-4D7D-448D-869D-51FA5D118F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7E6B2F-4D7D-448D-869D-51FA5D118F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9B21F7-3808-4CF3-A6A4-B71290457877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9B21F7-3808-4CF3-A6A4-B71290457877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9B21F7-3808-4CF3-A6A4-B71290457877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9B21F7-3808-4CF3-A6A4-B71290457877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BB7FF2-577F-4717-B847-202E36E21943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BB7FF2-577F-4717-B847-202E36E21943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BB7FF2-577F-4717-B847-202E36E21943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BB7FF2-577F-4717-B847-202E36E21943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D309793-0448-44AE-AB67-B71E79992EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D309793-0448-44AE-AB67-B71E79992EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D309793-0448-44AE-AB67-B71E79992EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D309793-0448-44AE-AB67-B71E79992EC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C9B21F7-3808-4CF3-A6A4-B71290457877} = {D07E21C8-10D5-4455-8385-5E2DBB0AD592}
+		{59BB7FF2-577F-4717-B847-202E36E21943} = {D07E21C8-10D5-4455-8385-5E2DBB0AD592}
+		{3D309793-0448-44AE-AB67-B71E79992EC1} = {D07E21C8-10D5-4455-8385-5E2DBB0AD592}
 	EndGlobalSection
 EndGlobal
