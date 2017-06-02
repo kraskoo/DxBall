@@ -11,16 +11,16 @@
 
         public Time()
         {
-            OnTimeChange += TickChange;
-            OnTimeChange += MilliSecondsChange;
+            this.OnTimeChange += TickChange;
+            this.OnTimeChange += MilliSecondsChange;
         }
 
         public long CurrentTick
         {
             get
             {
-                OnTimeChange();
-                return currentTick;
+                this.OnTimeChange();
+                return this.currentTick;
             }
         }
 
@@ -28,8 +28,8 @@
         {
             get
             {
-                OnTimeChange();
-                return currentMilliSeconds;
+                this.OnTimeChange();
+                return this.currentMilliSeconds;
             }
         }
 
@@ -37,12 +37,12 @@
 
         private void TickChange()
         {
-            currentTick = DateTime.Now.Ticks;
+            this.currentTick = DateTime.Now.Ticks;
         }
 
         private void MilliSecondsChange()
         {
-            currentMilliSeconds = DateTime.Now.Millisecond;
+            this.currentMilliSeconds = DateTime.Now.Millisecond;
         }
     }
 }

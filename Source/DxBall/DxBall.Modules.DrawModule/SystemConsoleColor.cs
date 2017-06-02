@@ -13,18 +13,18 @@
 
         public SystemConsoleColor()
         {
-            originColors = GetOriginsToConsoleColors();
-            translatedColors = GetConsoleToOriginColors();
+            this.originColors = GetOriginsToConsoleColors();
+            this.translatedColors = GetConsoleToOriginColors();
         }
 
         public ColorType GetOriginColor(ConsoleColor color)
         {
-            return translatedColors[color];
+            return this.translatedColors[color];
         }
 
         public ConsoleColor GetTranslatedColor(ColorType color)
         {
-            return originColors[color];
+            return this.originColors[color];
         }
 
         private ConcurrentDictionary<ColorType, ConsoleColor> GetOriginsToConsoleColors()

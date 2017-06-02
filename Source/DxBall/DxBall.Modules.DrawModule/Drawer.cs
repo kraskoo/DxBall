@@ -15,6 +15,8 @@
 
         public abstract void DrawAt(int x, int y, char representation, ColorType color);
 
+        public abstract void DrawAt(int x, int y, string representation, ColorType color);
+
         protected IColorTranslator<ConsoleColor> ColorTranslator { get; }
 
         protected TextWriter Writer { get; }

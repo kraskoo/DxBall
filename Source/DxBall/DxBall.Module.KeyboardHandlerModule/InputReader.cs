@@ -9,8 +9,8 @@
     {
         protected InputReader(TextReader reader, IKeyTranslator<T> translator)
         {
-            Translator = translator;
-            Reader = reader;
+            this.Translator = translator;
+            this.Reader = reader;
         }
 
         public IKeyTranslator<T> Translator { get; }

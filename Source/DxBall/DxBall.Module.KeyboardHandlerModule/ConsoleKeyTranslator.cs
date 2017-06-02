@@ -12,28 +12,28 @@
 
         public ConsoleKeyTranslator()
         {
-            translatedKeys = GetOriginToTranslatedKeys();
-            originKeys = GetTranslatedToOriginKeys();
+            this.translatedKeys = GetOriginToTranslatedKeys();
+            this.originKeys = GetTranslatedToOriginKeys();
         }
 
         public KeyType GetOriginKey(ConsoleKey key)
         {
-            if (!originKeys.Keys.Contains(key))
+            if (!this.originKeys.Keys.Contains(key))
             {
                 return KeyType.Useless;
             }
 
-            return originKeys[key];
+            return this.originKeys[key];
         }
 
         public ConsoleKey GetTranslatedKey(KeyType keyType)
         {
-            if (!translatedKeys.Keys.Contains(keyType))
+            if (!this.translatedKeys.Keys.Contains(keyType))
             {
                 return ConsoleKey.Zoom;
             }
 
-            return translatedKeys[keyType];
+            return this.translatedKeys[keyType];
         }
 
         private ConcurrentDictionary<KeyType, ConsoleKey> GetOriginToTranslatedKeys()
