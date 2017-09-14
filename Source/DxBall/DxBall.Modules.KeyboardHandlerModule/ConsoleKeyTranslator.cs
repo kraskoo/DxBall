@@ -1,4 +1,4 @@
-﻿namespace DxBall.Module.KeyboardHandlerModule
+﻿namespace DxBall.Modules.KeyboardHandlerModule
 {
     using System;
     using System.Collections.Concurrent;
@@ -9,11 +9,13 @@
     {
         private readonly ConcurrentDictionary<KeyType, ConsoleKey> translatedKeys;
         private readonly ConcurrentDictionary<ConsoleKey, KeyType> originKeys;
+        private ConcurrentDictionary<int, ConsoleKey> consoleKeyIntValues;
 
         public ConsoleKeyTranslator()
         {
             this.translatedKeys = GetOriginToTranslatedKeys();
             this.originKeys = GetTranslatedToOriginKeys();
+            this.GetConsoleKeyAsInt();
         }
 
         public KeyType GetOriginKey(ConsoleKey key)
@@ -34,6 +36,11 @@
             }
 
             return this.translatedKeys[keyType];
+        }
+
+        public ConsoleKey GetTranslatedKeyFromInt(int value)
+        {
+            return this.consoleKeyIntValues[value];
         }
 
         private ConcurrentDictionary<KeyType, ConsoleKey> GetOriginToTranslatedKeys()
@@ -203,6 +210,18 @@
                     new KeyValuePair<ConsoleKey, KeyType>(ConsoleKey.DownArrow, KeyType.DownArrow)
                 }
             );
+        }
+
+        private void GetConsoleKeyAsInt()
+        {
+            this.consoleKeyIntValues = new ConcurrentDictionary<int, ConsoleKey>();
+            var consoleKeyValues = Enum.GetValues(typeof(ConsoleKey));
+            for (int i = 0; i < consoleKeyValues.Length; i++)
+            {
+                var value = (ConsoleKey)consoleKeyValues.GetValue(i);
+                var asInt = (int)value;
+                this.consoleKeyIntValues.TryAdd(asInt, value);
+            }
         }
     }
 }

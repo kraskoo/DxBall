@@ -1,4 +1,4 @@
-﻿namespace DxBall.Module.KeyboardHandlerModule.Interfaces
+﻿namespace DxBall.Modules.KeyboardHandlerModule.Interfaces
 {
     using System;
 
@@ -8,5 +8,7 @@
         KeyType GetOriginKey(T key);
 
         T GetTranslatedKey(KeyType keyType);
+
+        T GetTranslatedKeyFromInt(int value);
     }
 }

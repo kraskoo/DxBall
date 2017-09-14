@@ -7,8 +7,8 @@
     <ProjectGuid>{59BB7FF2-577F-4717-B847-202E36E21943}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DxBall.Module.KeyboardHandlerModule</RootNamespace>
-    <AssemblyName>DxBall.Module.KeyboardHandlerModule</AssemblyName>
+    <RootNamespace>DxBall.Modules.KeyboardHandlerModule</RootNamespace>
+    <AssemblyName>DxBall.Modules.KeyboardHandlerModule</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

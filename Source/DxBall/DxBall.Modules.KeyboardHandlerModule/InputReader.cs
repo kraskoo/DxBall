@@ -1,4 +1,4 @@
-﻿namespace DxBall.Module.KeyboardHandlerModule
+﻿namespace DxBall.Modules.KeyboardHandlerModule
 {
     using System;
     using System.IO;
@@ -15,8 +15,8 @@
 
         public IKeyTranslator<T> Translator { get; }
 
-        public abstract T ReadKey();
+        public abstract KeyType ReadKey();
 
-        protected TextReader Reader { get; }
+        protected TextReader Reader { get; private set; }
     }
 }

@@ -1,11 +1,26 @@
 ﻿namespace DxBall.Modules.DrawModule.Interfaces
 {
+    using System.IO;
     using Enums;
 
     public interface IDrawer
     {
-        void DrawAt(int x, int y, char representation, ColorType color);
+        TextWriter Writer { get; }
 
-        void DrawAt(int x, int y, string representation, ColorType color);
+        ColorType CurrentForeground { get; }
+
+        ColorType CurrentBackground { get; }
+
+        int CurrentX { get; }
+
+        int CurrentY { get; }
+
+        void MoveAt(int x, int y);
+
+        void Draw(char representation, ColorType foregroundColor, ColorType backgroundColor);
+
+        void Draw(string representation, ColorType foregroundColor, ColorType backgroundColor);
+
+        void GetBackToDefaultSettings();
     }
 }

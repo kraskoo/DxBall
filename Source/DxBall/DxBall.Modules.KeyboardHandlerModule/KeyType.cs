@@ -1,4 +1,4 @@
-﻿namespace DxBall.Module.KeyboardHandlerModule
+﻿namespace DxBall.Modules.KeyboardHandlerModule
 {
     public enum KeyType
     {
