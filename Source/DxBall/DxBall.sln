@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.Startup", "DxBall.St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.Modules.KeyboardHandlerModule", "DxBall.Modules.KeyboardHandlerModule\DxBall.Modules.KeyboardHandlerModule.csproj", "{59BB7FF2-577F-4717-B847-202E36E21943}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DxBall.Library.Builder", "DxBall.Library.Builder\DxBall.Library.Builder.csproj", "{AF8F1409-99F9-4DA0-9276-DED1F91E2EFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{59BB7FF2-577F-4717-B847-202E36E21943}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59BB7FF2-577F-4717-B847-202E36E21943}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59BB7FF2-577F-4717-B847-202E36E21943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8F1409-99F9-4DA0-9276-DED1F91E2EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8F1409-99F9-4DA0-9276-DED1F91E2EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8F1409-99F9-4DA0-9276-DED1F91E2EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8F1409-99F9-4DA0-9276-DED1F91E2EFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

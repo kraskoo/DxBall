@@ -28,11 +28,13 @@
         public IDictionary<KeyType?, Action> BindsByKey { get; private set; }
 
         [Inject]
-        protected IDisplay Display { get; private set; }
+        protected IDisplay Display { get; set; }
+
         [Inject]
-        protected IDrawer Drawer { get; private set; }
+        protected IDrawer Drawer { get; set; }
+
         [Inject]
-        protected InputReader<ConsoleKey> InputReader { get; private set; }
+        protected InputReader<ConsoleKey> InputReader { get; set; }
 
         public IEnumerable<Expression<Predicate<IState>>> StateRules()
         {
@@ -46,6 +48,11 @@
             {
                 this.context.Respond();
             }
+        }
+
+        public override string ToString()
+        {
+            return this.StateType.ToString();
         }
     }
 }

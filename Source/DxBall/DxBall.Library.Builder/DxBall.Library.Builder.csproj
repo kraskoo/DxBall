@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B03B713-430A-410D-B905-0681B75B1710}</ProjectGuid>
+    <ProjectGuid>{AF8F1409-99F9-4DA0-9276-DED1F91E2EFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DxBall.Engine</RootNamespace>
-    <AssemblyName>DxBall.Engine</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>DxBall.Library.Builder</RootNamespace>
+    <AssemblyName>DxBall.Library.Builder</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -40,38 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SolutionTypes.cs" />
-    <Compile Include="Attribute\InjectAttribute.cs" />
-    <Compile Include="DependencyResolver.cs" />
-    <Compile Include="DxBallEngine.cs" />
-    <Compile Include="Enums\GameStateType.cs" />
-    <Compile Include="GameContext.cs" />
-    <Compile Include="GameStates\EndGameInfoState.cs" />
-    <Compile Include="GameStates\GameOverInfoState.cs" />
-    <Compile Include="GameStates\GameState.cs" />
-    <Compile Include="GameStates\MenuState.cs" />
-    <Compile Include="GameStates\StartupInfoState.cs" />
-    <Compile Include="GameStates\State.cs" />
-    <Compile Include="Interfaces\IGameContext.cs" />
-    <Compile Include="Interfaces\IRuleStateable.cs" />
-    <Compile Include="Interfaces\IRuleTakeable.cs" />
-    <Compile Include="Interfaces\IRunnable.cs" />
-    <Compile Include="Interfaces\IState.cs" />
+    <Compile Include="AssemblyPrimitives\Domain.cs" />
+    <Compile Include="AssemblyPrimitives\NewObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DxBall.Modules.DrawModule\DxBall.Modules.DrawModule.csproj">
-      <Project>{3D309793-0448-44AE-AB67-B71E79992EC1}</Project>
-      <Name>DxBall.Modules.DrawModule</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DxBall.Modules.KeyboardHandlerModule\DxBall.Modules.KeyboardHandlerModule.csproj">
-      <Project>{59BB7FF2-577F-4717-B847-202E36E21943}</Project>
-      <Name>DxBall.Modules.KeyboardHandlerModule</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DxBall.Screen\DxBall.Screen.csproj">
-      <Project>{6E5AB6D3-3286-465D-8D56-BB4F6D963834}</Project>
-      <Name>DxBall.Screen</Name>
-    </ProjectReference>
+    <Folder Include="LiveLibrary\" />
+    <Folder Include="ModuleComponents\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

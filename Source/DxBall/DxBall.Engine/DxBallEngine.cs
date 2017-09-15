@@ -129,9 +129,10 @@ namespace DxBall.Engine
 
         public IState[] RegisterStates(IState[] states)
         {
-            foreach (IState state in states)
+            foreach (var state in states)
             {
-                resolver.ResolveFromCurrentProceed(state);
+                //var originStateType = Convert.ChangeType(state, state.GetType());
+                this.resolver.ResolveFromCurrentProceed(state);
             }
 
             return states;

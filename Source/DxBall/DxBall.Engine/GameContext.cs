@@ -21,7 +21,7 @@
 
         public bool IsAbleToRespondOnRequest { get; private set; }
 
-        public bool IsTrue<T>(Expression<Func<T, bool>> statelessFuncExpression) where T : IState
+        public bool IsTrue<T>(Expression<Func<T, bool>> statelessFuncExpression) where T : State
         {
             var typeofT = typeof(T);
             var parsedStateType = (GameStateType)Enum.Parse(typeofT, typeofT.FullName);
@@ -30,7 +30,7 @@
         }
 
         public bool AreTrue<T>(params Expression<Func<T, bool>>[] statelessFuncs)
-            where T : IState
+            where T : State
         {
             bool hasValidState = true;
             foreach (var statelessFunc in statelessFuncs)
