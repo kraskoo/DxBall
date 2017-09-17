@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DxBall.Library.Builder\DxBall.Library.Builder.csproj">
+      <Project>{af8f1409-99f9-4da0-9276-ded1f91e2efd}</Project>
+      <Name>DxBall.Library.Builder</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DxBall.Modules.DrawModule\DxBall.Modules.DrawModule.csproj">
       <Project>{3D309793-0448-44AE-AB67-B71E79992EC1}</Project>
       <Name>DxBall.Modules.DrawModule</Name>

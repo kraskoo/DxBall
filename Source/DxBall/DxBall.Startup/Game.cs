@@ -1,11 +1,14 @@
 ﻿namespace DxBall.Startup
 {
     using Engine;
+    using Engine.Attribute;
     using Engine.Interfaces;
 
-    public static class Game
+    [EntryPoint]
+    public class Game
     {
-        public static void Main() => Start(new DxBallEngine());
+        private static IRunnable Engine;
+        public static void Main() => Start(Engine ?? (Engine = new DxBallEngine()));
         private static void Start(IRunnable engine) => engine.Run();
     }
 }

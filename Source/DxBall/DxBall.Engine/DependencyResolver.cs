@@ -5,21 +5,20 @@
     using System.Reflection;
     using Attribute;
     using Enums;
+    using GameStates;
     using Interfaces;
 
     public class DependencyResolver
     {
-        private readonly object currentInstanceHolder;
+        private readonly IRunnable currentInstanceHolder;
         private readonly TypeInfo holderType;
-        private readonly SolutionTypes solution;
         private readonly IDictionary<GameStateType, IState> stateByType;
 
-        public DependencyResolver(object holder)
+        public DependencyResolver()
         {
-            this.solution = new SolutionTypes();
-            this.currentInstanceHolder = holder;
+            currentInstanceHolder = SolutionTypes.InitializeCallers<IRunnable>();
             this.holderType = this.currentInstanceHolder.GetType().GetTypeInfo();
-            this.stateByType = new Dictionary<GameStateType, IState>();
+            this.stateByType = this.StateByTypes();
         }
 
         public void ResolveFromCurrentProceed<T>(T instance)
@@ -49,7 +48,79 @@
 
         public IState GetState(GameStateType gameState)
         {
+            if (!this.stateByType.ContainsKey(gameState))
+            {
+                return null;
+            }
+
             return this.stateByType[gameState];
+        }
+
+        private Dictionary<GameStateType, IState> StateByTypes()
+        {
+            return new Dictionary<GameStateType, IState>
+            {
+                {
+                    GameStateType.StartupInfo,
+                    new StartupInfoState(
+                        new[]
+                        {
+                            typeof(bool)
+                        },
+                        new[]
+                        {
+                            "IsStartInfoRunning"
+                        })
+                },
+                {
+                    GameStateType.EndGameInfo,
+                    new EndGameInfoState(
+                        new[]
+                        {
+                            typeof(bool)
+                        },
+                        new[]
+                        {
+                            "IsStartInfoRunning"
+                        })
+                },
+                {
+                    GameStateType.GameoverInfo,
+                    new GameOverInfoState(
+                        new[]
+                        {
+                            typeof(bool)
+                        },
+                        new[]
+                        {
+                            "IsStartInfoRunning"
+                        })
+                },
+                {
+                    GameStateType.Game,
+                    new GameState(
+                        new[]
+                        {
+                            typeof(bool)
+                        },
+                        new[]
+                        {
+                            "IsStartInfoRunning"
+                        })
+                },
+                {
+                    GameStateType.Menu,
+                    new MenuState(
+                        new[]
+                        {
+                            typeof(bool)
+                        },
+                        new[]
+                        {
+                            "IsStartInfoRunning"
+                        })
+                }
+            };
         }
     }
 }

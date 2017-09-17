@@ -73,15 +73,7 @@
 
         private IState[] GetStatesFromContext()
         {
-            return this.engine.RegisterStates(
-                new IState[]
-                {
-                    new StartupInfoState(),
-                    new EndGameInfoState(),
-                    new GameOverInfoState(),
-                    new GameState(),
-                    new MenuState()
-                });
+            return this.engine.RegisterStates();
         }
     }
 }

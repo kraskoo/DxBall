@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF8F1409-99F9-4DA0-9276-DED1F91E2EFD}</ProjectGuid>
+    <ProjectGuid>{5B608250-F1C5-45DB-BA53-DB2230FAEEA9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DxBall.Library.Builder</RootNamespace>
-    <AssemblyName>DxBall.Library.Builder</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>DxBall.Common</RootNamespace>
+    <AssemblyName>DxBall.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,16 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyPrimitives\IdentityBuilder.cs" />
-    <Compile Include="AssemblyPrimitives\VersionBuilder.cs" />
-    <Compile Include="Domain.cs" />
-    <Compile Include="Enums\CultureInfoType.cs" />
-    <Compile Include="Factories\CultureInfoFactory.cs" />
-    <Compile Include="ModuleComponents\Component.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LiveLibrary\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

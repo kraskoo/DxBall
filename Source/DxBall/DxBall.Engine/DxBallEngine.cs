@@ -1,10 +1,12 @@
-﻿using DxBall.Engine.Enums;
-using DxBall.Engine.GameStates;
+﻿using System.Linq;
+using System.Reflection;
+using DxBall.Engine.Enums;
 
 namespace DxBall.Engine
 {
     using System;
     using System.Collections.Generic;
+    using GameStates;
     using Interfaces;
     using Modules.DrawModule;
     using Modules.DrawModule.Interfaces;
@@ -61,14 +63,7 @@ namespace DxBall.Engine
         private void StartGame()
         {
             this.IsGameRunning = true;
-            var states = this.RegisterStates(new IState[]
-            {
-                new StartupInfoState(),
-                new EndGameInfoState(),
-                new GameOverInfoState(),
-                new GameState(),
-                new MenuState()
-            });
+            var states = this.RegisterStates();
             return;
             while (this.IsGameRunning)
             {
@@ -90,7 +85,7 @@ namespace DxBall.Engine
 
         private void Initialize()
         {
-            this.resolver = new DependencyResolver(this);
+            this.resolver = new DependencyResolver();
             this.gameContext = new GameContext(this);
             this.actionByName = this.RegisterActions();
 
@@ -127,15 +122,21 @@ namespace DxBall.Engine
             };
         }
 
-        public IState[] RegisterStates(IState[] states)
+        public IState[] RegisterStates()
         {
-            foreach (var state in states)
+            var enumValues = Enum.GetValues(typeof(GameStateType));
+            for (int i = 0; i < enumValues.Length; i++)
             {
-                //var originStateType = Convert.ChangeType(state, state.GetType());
-                this.resolver.ResolveFromCurrentProceed(state);
+                var currentEnumValue = enumValues.GetValue(i);
+                var parsedEnumValue = (GameStateType)Enum.Parse(currentEnumValue.GetType(), currentEnumValue.ToString());
+                var classWithCurrentType = SolutionTypes.Classes()
+                    .FirstOrDefault(
+                        c => c.GetTypeInfo()
+                        .DeclaredProperties
+                        .Any(dp => dp.PropertyType.Name == currentEnumValue.GetType().Name));
             }
 
-            return states;
+            return null;
         }
     }
 }
